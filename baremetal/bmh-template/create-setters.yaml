@@ -13,4 +13,4 @@ data:
   root-hints-device-name: DEVICE_NAME_PLACEHOLDER 
   root-hints-serial-number: DRIVE_SERIAL_NUM_PLACEHOLDER 
   bmc-address: BMC_ADDRESS_PLACEHOLDER 
-  bmd-creds-name: BMC_SECRET_PLACEHOLDER 
+  bmc-creds-name: BMC_SECRET_PLACEHOLDER 
