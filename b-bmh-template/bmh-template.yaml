@@ -1,0 +1,17 @@
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata: # kpt-merge: /BMH_NAME_PLACEHOLDER
+  name: b-bmh # kpt-set: ${bmh-name}
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'metal3.io|BareMetalHost|default|BMH_NAME_PLACEHOLDER'
+spec:
+  online: true
+  bootMACAddress: b4:96:91:c4:d3:f4 # kpt-set: ${boot-mac-address}
+  bootMode: UEFI
+  disablePowerOff: false
+  rootDeviceHints:
+    serialNumber: S436NA0R757334 # kpt-set: ${root-hints-serial-number}
+  bmc:
+    address: ilo5-redfish://192.168.14.164/redfish/v1/Systems/1 # kpt-set: ${bmc-address}
+    credentialsName: b-bmc-secret # kpt-set: ${bmc-creds-name}
+    disableCertificateVerification: true
