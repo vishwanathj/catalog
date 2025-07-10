@@ -20,3 +20,15 @@ upstreamLock:
     commit: b6dc870fe7e155a347619189b3a177a6b9336991
 info:
   description: cluster-api bare metal host package
+pipeline:
+  mutators:
+  - name: PackageVariant.b-bmh..0
+    image: gcr.io/kpt-fn/apply-setters:v0.2.0
+    configMap:
+      bmc-address: ilo5-redfish://192.168.14.164/redfish/v1/Systems/1
+      bmc-creds-name: b-bmc-secret
+      bmc-password: d2NhdFU1aTV6dDdGCg==
+      bmc-username: YWRtaW4=
+      bmh-name: b-bmh
+      boot-mac-address: b4:96:91:c4:d3:f4
+      root-hints-serial-number: S436NA0R757334
