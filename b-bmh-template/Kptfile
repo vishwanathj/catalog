@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /b-bmh-template
+  name: b-bmh-template
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|b-bmh-template'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/vjayaramrh/catalog.git
+    directory: bmh-template
+    ref: kmm-operator
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/vjayaramrh/catalog.git
+    directory: bmh-template
+    ref: kmm-operator
+    commit: b6dc870fe7e155a347619189b3a177a6b9336991
+info:
+  description: cluster-api bare metal host package
